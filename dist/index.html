@@ -1,38 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>UI5 Web Components</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>Quickstart</title>
+    <script id="sap-ui-bootstrap" src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" data-sap-ui-theme="sap_belize" data-sap-ui-libs="sap.m, sap.ui.layout, sap.tnt" data-sap-ui-resourceroots="{&quot;Quickstart&quot;: &quot;./&quot;}" data-sap-ui-async="true"></script>
+    <script>sap.ui.getCore().attachInit(function () {
+  sap.ui.require(["sap/ui/core/mvc/XMLView"], function (XMLView) {
+    XMLView.create({
+      viewName: "Quickstart.App"
+    }).then(function (oView) {
+      oView.placeAt("content");
+    });
+  });
+});</script>
   </head>
-
-  <body>
-    <ui5-title>UI5 Web Components are here!</ui5-title>
-    <br><br>
-
-    <ui5-messagestrip type="Warning" no-close-button="">
-      Adding more components? Check the sample page of the component and add the
-      corresponding import statement in `src/index.js`
-    </ui5-messagestrip>
-    <br><br>
-
-    <ui5-datepicker style="width: 300px;"></ui5-datepicker>
-    <br><br>
-
-    <ui5-button design="Positive">Positive</ui5-button>
-    <ui5-button design="Negative">Negative</ui5-button>
-    <br><br>
-
-    <ui5-switch graphical="" checked=""></ui5-switch>
-    <br>
-    <ui5-button id="openDialogButton">Open Dialog</ui5-button>
-    <br>
-
-    <ui5-dialog id="hello-dialog" header-text="Dialogs are easy!">
-      <div stype="padding: 2rem; display:flex; justify-content: center;">
-        Hello World!
-        <ui5-button id="closeDialogButton">Dismiss</ui5-button>
-      </div>
-    </ui5-dialog>
-    <script src="/src.a2b27638.js"></script>
-  </body>
+  <body class="sapUiBody" id="content"></body>
 </html>
